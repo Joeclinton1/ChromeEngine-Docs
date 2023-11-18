@@ -63,6 +63,8 @@ Let's give the player a congratulatory message when they win! First make a costu
 <ScratchBlocks>
 {`
 if <(has_won?) = [1]> then
+    set size to [100] %
+    go to x: [0] y: [0]
     switch costume to (win_screen v)
     stamp
 `}

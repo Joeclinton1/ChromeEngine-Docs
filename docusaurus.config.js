@@ -5,12 +5,12 @@ module.exports = {
     title: 'ChromeEngine Documentation',
     tagline: 'Learn how to use and extend Scratch\'s most powerful 3D game engine',
     url: 'https://your-docusaurus-test-site.com',
-    baseUrl: '/',
+    baseUrl: '/ChromeEngine-Docs/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
-    organizationName: 'https://github.com/Joeclinton1', // Replace with your GitHub username
-    projectName: 'your-project-name', // Replace with your GitHub project name
+    organizationName: 'Joeclinton1', // Replace with your GitHub username
+    projectName: 'ChromeEngine-Docs', // Replace with your GitHub project name
     clientModules: [require.resolve('./src/plugins/scratchblocks.js')],
     presets: [
         [
