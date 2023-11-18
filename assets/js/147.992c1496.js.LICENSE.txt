@@ -1,0 +1,8 @@
+/**
+ * scratchblocks v3.6.1
+ * https://scratchblocks.github.io/
+ * Render scratchblocks code to SVG images.
+ *
+ * Copyright 2013–2022, Tim Radvan
+ * @license MIT
+ */
