@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkchrome_engine_docs=self.webpackChunkchrome_engine_docs||[]).push([[718],{1169:e=>{e.exports=JSON.parse('{"allTagsPath":"/ChromeEngine-Docs/blog/tags","slug":"/ChromeEngine-Docs/blog/tags/scratch","name":"Scratch","count":1,"permalink":"/ChromeEngine-Docs/blog/tags/scratch"}')}}]);
