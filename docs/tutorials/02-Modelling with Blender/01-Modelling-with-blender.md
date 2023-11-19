@@ -8,6 +8,14 @@ We're not going to cover how you make the scene as there are plenty of [great Bl
 
 ![Blender Screenshot of spikes and enemy](media/spikes-and-enemy.png "Spikes and Enemies")
 
+## Blender to ChromeEngine coordinates
+Whilst modelling details or setting positions you might want to specify specific coordinates. Unfortunately you can't get the coordinate of vertices yet in ChromeEngine however you can do this in Blender.
+
+1. Enter `Edit Mode` and right click on a vertex
+2. press `N` to open properties, and from there you can see the coordinates of the vertex.
+    1. Tip: make sure to set to Global!
+3. ChromeEngine and Blender use different coordinate systems but you can easily convert them by just swapping the y and z value. And multiplying the new z by negative 1.
+
 ###  Preparing dynamic objects for ChromeEngine
 
 When you import your scene into ChromeEngine the transform origin of each object will always be the origin. This can be problematic, as when we try to transform these objects and their transform center lies at the origin instead of the center of the object, our transformations will be wrong.
@@ -44,6 +52,18 @@ The `import_from_OBJ_file` function, part of the `GameObjects` class, imports yo
 
 To import the file, assign the function to a variable, right-click on `_OBJ`, select `import from file`, and choose the .obj file you exported earlier.
 
+### Moving the dynamic objects back
+
+Previously we moved all the dynamic objects to 0,0,0 so that their rotation centres would be the same as their local origins. However now we need to move them back. The recommended way to do this is to go to the `Logic` sprite, and add to `GameObjects.setup()` custom block a `setPosition` block for each dynamic object, to set it's position back to what it used to be. Thankfully we made sure to write down all the old positions! Remember ChromeEngine and blender don't have the same coordinate system so you will need to convert the coordinates (reminder: we do this by swapping the y and z value. And multiplying the new z by negative 1). Here's an example of how to re-position a dynamic object back to it's old location:
+
+<ScratchBlocks>
+{`
+define GameObjects.setup\\(\\):
+    GameObject.setPosition \\( object name [Platform 3] position  [0.6] [3.6] [-5.2] \\) :: custom
+`}
+</ScratchBlocks>
+
+
 ## Importing multiple meshes using `obj file data` input
 
 Importing our .obj file to `_OBJ` and loading it once works fine if you have one single level but often your game will need to have many levels, so how would you do this? Thankfully ChromeEngine has you covered. Instead of importing your .obj file into the _OBJ list simply copy and paste it and put it in the optional `.obj file data` input in the `GameObjects.importFromOBJFile` block!
@@ -56,7 +76,7 @@ GameObjects.importFromOBJFile \\( CW orientated? <> scale [1] align_center <> .o
 
 ## Materials
 
-### Materials and MTL Files
+### Exporting an MTL file
 
 Materials play a crucial role in defining the appearance of 3D objects. They determine their color, texture, and surface properties like shininess. To create materials, we'll be using Blender, a powerful software. We can then export these materials into ChromeEngine scenes using a file format called MTL.
 
@@ -66,7 +86,7 @@ To ensure proper export, remember to use the "Principled BSDF" shader when setti
 2. Once you're satisfied with your materials, navigate to `File > Export > Wavefront (.obj)`.
 3. In the export options panel, make sure to enable the `Write Materials` option, and then proceed with the export.
 
-### Importing an MTL File
+### Importing an MTL file
 
 Now that you have your MTL file, it's time to import it into ChromeEngine. Follow these steps:
 
@@ -81,12 +101,3 @@ Here's an example of how it should look:
 Materials.importFromMTL\\(.MTL file data [your file data goes here]\\) :: custom
 `}
 </ScratchBlocks>
-
-
-## Blender to ChromeEngine coordinates
-Whilst modelling details or setting positions you might want to specify specific coordinates. Unfortunately you can't get the coordinate of vertices yet in ChromeEngine however you can do this in Blender.
-
-1. Enter `Edit Mode` and right click on a vertex
-2. press `N` to open properties, and from there you can see the coordinates of the vertex.
-    1. Tip: make sure to set to Global!
-3. ChromeEngine and Blender use different coordinate systems but you can easily convert them by just swapping the y and z value. And multiplying the new z by negative 1.
