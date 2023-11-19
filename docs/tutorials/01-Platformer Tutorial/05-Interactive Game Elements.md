@@ -67,7 +67,7 @@ if <(has_won?) = [1]> then
     go to x: [0] y: [0]
     switch costume to (win_screen v)
     stamp
-`} 
+`}
 </ScratchBlocks>
 
 This simply checks if we're in the `has_won` state and if so shows the win_screen.
