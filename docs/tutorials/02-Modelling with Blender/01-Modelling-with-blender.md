@@ -40,7 +40,7 @@ Once you've finished designing your game scene in Blender, export it as an .obj 
 
 ### Importing your mesh
 
-Now that you have your beautiful .obj file, let's bring it into your ChromeEngine game. Here's how:
+Now that you have your beautiful .obj file, let's bring it into your ChromeEngine game. To do this we can use the `import_from_OBJ_file` block:
 
 <ScratchBlocks>
 {`
@@ -48,7 +48,11 @@ GameObjects.import_from_OBJ_file \\( CW orientated? <> scale [1] align_center <>
 `}
 </ScratchBlocks>
 
-The `import_from_OBJ_file` function, part of the `GameObjects` class, imports your .obj file into ChromeEngine. The argument `CW orientated? [1]` indicates that your object's faces are oriented clockwise.
+This block when placed within `Setup Scene objects` will let you import a mesh as a ChromeEngine GameObject. It has the following inputs:
+- `CW orientated?` indicates whether your object has clockwise or anticlockwise orientated faces. If your model appears "inside-out" it's probably because this is set wrong
+- `scale` - this is the size of the model on load. ChromeEngine uses BSP and expects all your vertices to be on a normalized scale between -1 to 1. If you find BSP messed up your mesh you should try changing the scale.
+- `align-centre` - this will re-centre your mesh, which is helpful if you want to apply rotations to your object, or your mesh file isn't your own.
+- `.obj file data` - used if you want to copy and paste obj file data into an input instead of setting the _OBJ file data.
 
 To import the file, assign the function to a variable, right-click on `_OBJ`, select `import from file`, and choose the .obj file you exported earlier.
 
@@ -73,6 +77,18 @@ Importing our .obj file to `_OBJ` and loading it once works fine if you have one
 GameObjects.importFromOBJFile \\( CW orientated? <> scale [1] align_center <> .obj file data \\( leave blank if using _OBJ list \\) [Copy and paste your .obj file here, instead of importing it to _OBJ]\\) :: custom
 `}
 </ScratchBlocks>
+
+## Pre-compiling on Turbowarp and exporting with `ExportScene`
+
+If your mesh is very complex, the BSP tree generation will take forever on regular scratch so we recommend you use turbowarp to generate your BSP tree and then import it into ChromeEngine. To import an obj file along with a pregenerated bsp tree use `ExportScene`
+
+<ScratchBlocks>
+{`
+_OBJ = exportScene\\(\\) :: custom
+`}
+</ScratchBlocks>
+
+All you need to do is click the green flag and wait for your game to be "compiled" via ChromeEngine on turbowarp, then click on the `ExportScene`, and your new custom ChromeEngine .obj file will be stored in the `_OBJ` list. You can now right click the list, click export and then use this .txt file in your regular Scratch version instead. If you use an obj file which is of the ChromeEngineOBJ format ChromeEngine automatically detects this and loads your BSP tree from the file instead of generating it, which makes loading times much faster.
 
 ## Materials
 

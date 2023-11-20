@@ -101,12 +101,13 @@ Imports an .obj file into ChromeEngine. You can either import your .OBJ file to 
 
 - `CW orientated? [1]`: indicates that your object's faces are oriented clockwise.
 - `scale`: lets you scale up or down the model. Default is 1.
+- `align_centre`: lets your re-centre your mesh
 
 ### `exportScene`
 
 <ScratchBlocks>
 {`
-_OBJ = exportScene() :: custom
+_OBJ = exportScene\\(\\) :: custom
 `}
 </ScratchBlocks>
 
