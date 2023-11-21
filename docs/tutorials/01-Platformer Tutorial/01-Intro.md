@@ -2,7 +2,7 @@
 
 ## The plan
 
-In this tutorial we're going make a simple platformer using ChromeEngine. 
+In this tutorial we're going to make a simple platformer using ChromeEngine. 
 Here's a sketch of what we'll be making:
 ![Diagram of Platformer Scene](media/the-plan.png "The plan")
 
