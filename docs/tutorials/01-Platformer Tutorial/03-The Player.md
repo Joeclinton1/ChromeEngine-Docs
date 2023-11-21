@@ -40,7 +40,7 @@ In ChromeEngine we can add sound effects which play when walking by adding 4 sou
 
 <ScratchBlocks>
 {`
-materials.set_sfx \\(material [Yellow], sound effect label [Concrete Step]\\) :: custom
+materials.setSfx \\(material [Yellow] sound effect label [Concrete Step]\\) :: custom
 `}
 </ScratchBlocks>
 
