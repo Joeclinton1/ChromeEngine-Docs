@@ -6,7 +6,7 @@ In this tutorial we're going to make a simple platformer using ChromeEngine.
 Here's a sketch of what we'll be making:
 ![Diagram of Platformer Scene](media/the-plan.png "The plan")
 
-We'll be using ChromeEngine for this tutorial. To get an empty version of ChromeEngine that you can use for the tutorial all you need to do is remix [this project](https://scratch.mit.edu/projects/714869495/)
+We'll be using ChromeEngine for this tutorial. To get an empty version of ChromeEngine that you can use for the tutorial all you need to do is remix [this project](https://scratch.mit.edu/projects/868415101/)
 
 ## ChromeEngine's Layout
 
