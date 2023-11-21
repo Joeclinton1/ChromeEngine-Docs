@@ -39,7 +39,7 @@ GameObjects.createCuboid \\(Scale [ ] [ ] [ ] Position [ ] [ ] [ ] Rotation [ ] 
 `}
 </ScratchBlocks>
 
-This lets us specify Scale, Position, one of our previously create materials and a name for our objects. ChromeEngine doesn't have a visual scene modelling environment, so to find the right Scale and Position values for our platforms we use trial and error. (For more complex scenes we recommend you model your scene in Blender, which you can learn how to do with our [Blender Modelling tutorial](/docs/tutorials/Modelling%20with%20Blender/Modelling-with-blender))
+This lets us specify Scale, Position, material and a name for our objects. ChromeEngine doesn't have a visual scene modelling environment, so to find the right Scale and Position values for our platforms we use trial and error. (For more complex scenes we recommend you model your scene in Blender, which you can learn how to do with our [Blender Modelling tutorial](/docs/tutorials/Modelling%20with%20Blender/Modelling-with-blender))
 
 It is important that you give each platform a name that you can remember because you'll be using it again later. We'll name our platforms: `Start`, `Platform 2`, `Platform 3`, `Platform 4`, `Platform 5`, `Platform 6`, `End`. 
 
@@ -71,7 +71,7 @@ GameObjects.createCone \\(Radius [] Height [] Number of sides [] Position [ ] [ 
 `}
 </ScratchBlocks>
 
-To make our spikes we'll use two of these each with Radius 0.2, height 0.3 and 4 sides. We'll assign them both the `Red` material. Make sure that your cones are positioned above the platformer and don't intersect with it.
+To make our spikes we'll use two of these each with Radius 0.2, height 0.3 and 4 sides. Make sure that your cones are positioned above the platformer and don't intersect with it.
 
 <ScratchBlocks>
 {`
