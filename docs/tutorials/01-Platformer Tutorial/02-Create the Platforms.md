@@ -141,6 +141,16 @@ Finally here's our finished flag!
 
 ![Flag Finished](media/flag-finished.png)
 
+## Moving the ground down
+
+As of currently the ground feels a little high up; we want our player to have some room to fall! We can move the ground by changing the `@ground_y` variable which controls the ground height setting. Add the following to the start of setup:
+
+<ScratchBlocks>
+{`
+set [@ground_y v] to [-1]
+`}
+</ScratchBlocks>
+
 ## Wrapping up and Additional Resources
 
 Congratulations! If you did all the steps correctly, you should now have something that looks a bit like this when you click the green flag:
