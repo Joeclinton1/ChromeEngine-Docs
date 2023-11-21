@@ -157,7 +157,7 @@ Congratulations! If you did all the steps correctly, you should now have somethi
 
 ![Scene Finished](media/scene-finished.png)
 
-Here's the finished code you should have after completing the `Setting the Scene` tutorial stage.
+Here's the finished code you should have after completing this stage of the tutorial.
 
 ![Finished Code](media/finished-code-setup.png)
 
