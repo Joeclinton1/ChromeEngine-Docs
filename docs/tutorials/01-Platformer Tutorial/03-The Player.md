@@ -28,11 +28,11 @@ Controllers.playerController \\( walk speed  [1] jump height [1.6] glide/walk mo
 `}
 </ScratchBlocks>
 
-In this block, we've defined the walking speed as `1`, running speed as `2`, and a jump height of `1.6`. The `glide/walk` mode is set to `True`, which means our player character will walk with instant acceleration and constant velocity, which is the standard movement type for first person games.
+In this block, we've defined the walking speed as `1` and a jump height of `1.6`. The `glide/walk` mode is set to `True`, which means our player character will walk with instant acceleration and constant velocity, which is the standard movement type for first person games.
 
-You can now take control of the character! You'll need to start the game to play it though. In ChromeEngine you can do this by either pressing the `P` key or clicking the little play button in the bottom left of the stage.
+You can now take control of the character! You'll need to start the game to play it though. By default the game loads in `Play Mode` but if you find for whatever reason that you're not in `Play mode` you can enter it by either pressing the `P` key or clicking the little play button in the bottom left of the stage.
 
-![Play Button](media/play-button.png)
+![Play Button](media/play-mode-button.png)
 
 ## Adding sound effects when walking
 

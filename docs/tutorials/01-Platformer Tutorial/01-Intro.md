@@ -10,7 +10,7 @@ We'll be using ChromeEngine for this tutorial. To get an empty version of Chrome
 
 ## ChromeEngine's Layout
 
-Before you begin using ChromeEngine it's helpful to know a little bit about it's layout. It's not complicated but it's important you're familiar with it or you might get stuck right out of the gate. ChromeEngine contains many sprites but you only need to care about 4 of them: `Setup`, `Logic`, `GUI`, `Settings`.
+Before you begin using ChromeEngine, it's helpful to know a little bit about it's layout. It's not complicated but it's important you're familiar with it or you might get stuck right out of the gate. ChromeEngine contains many sprites but you only need to care about 4 of them: `Setup`, `Logic`, `GUI`, `Settings`.
 
 ### Code Locations
 Additionally within those 4 sprites you MUST place your code within the designated blocks for user code. If in doubt please refer to the following table for all user code locations:
@@ -27,6 +27,14 @@ Additionally within those 4 sprites you MUST place your code within the designat
 - Sounds: Should be placed within the `Logic` sprite.
 - Textures: Should be placed within the `Render` sprite.
 - Skybox: In `Render` modify `skybox_day`, `skybox_night` and `ground` costumes
+
+## View Mode and Edit Mode
+
+In Chrome Engine, your game will by default load into `Play mode` but when making the scene it is crucial that you can look at what you're making. To do this you need to click the little square button in the bottom left corner of the screen. This button swaps you from `Play Mode` to `Edit mode`. In `Edit mode` you can fly around your scene using `WASD` for movement, arrow keys or mouse for rotating the view, and `Q` and `E` for vertical movement.
+
+All images in the tutorial are taken by first swapping to edit mode, then flying out to a point which lets us capture the best view.
+
+![Edit mode button](media/view-edit-mode-button.png)
 
 ## Ready, set, go!
 So, are you ready to embark on this exciting adventure of creating your very own platformer game? Let's jump right into it and start crafting an immersive world of platforms and challenges! 🎮🌟
