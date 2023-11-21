@@ -71,10 +71,19 @@ if <(has_won?) = [1]> then
 </ScratchBlocks>
 
 This simply checks if we're in the `has_won` state and if so shows the win_screen.
+## Finished code for interactions
 
-## Congratulations!
+If you got stuck you can simply copy the finished code from below:
 
-And there you have it! Our platformer game is now Complete! We hope you enjoyed the tutorial and can't wait to see what you make with ChromeEngine!
+![Finished Code](media/finished-code-interactions.png)
 
-(For more detailed information on object interactions in ChromeEngine, you can visit the guide [Object Interactions](/docs/user_docs/Interactions))
+For more detailed information on object interactions in ChromeEngine, you can visit the guide [Object Interactions](/docs/user_docs/Interactions)
+
+## Our Platformer is Complete!
+
+![Congratulations!](https://media4.giphy.com/media/xT8qBepJQzUjXpeWU8/giphy.gif)
+
+And there you have it! Our platformer game is now Complete! If you are struggling with any part we recommend you check out the [Platformer Tutorial](https://scratch.mit.edu/projects/926935828/) project on Scratch. If you click `See Inside` you can view all the final code and compare it to your own code.
+
+We hope you enjoyed the tutorial and can't wait to see what you make with ChromeEngine! For now ... Keep on Scratching!
 

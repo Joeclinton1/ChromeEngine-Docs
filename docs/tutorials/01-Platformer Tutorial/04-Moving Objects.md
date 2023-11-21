@@ -106,14 +106,15 @@ We can constrain the rotation by setting the pitch rotation to 0 AFTER calling `
 - `0` and `-20` are the x,z coordinate of the platform
 - `1.4` and `1.9` are the width, height of the platform
 
-
-
-
 ## Wrapping up and Additional Resources
 
 And there you have it! We've successfully set the stage for our platforms to dance and our enemies to attack. Here's what your platformer game should look like now:
 
 ![Moving Objects](media/moving-platforms.png)
+
+Addtionally if you got stuck you can simply copy the finished code below:
+
+![Finished Code](media/finished-code-movement.png)
 
 For more detailed information on updating objects in ChromeEngine, you can visit [Updating Objects](/docs/user_docs/Updating%20Objects) in our documentation.
 

@@ -18,13 +18,13 @@ _*obj, _*prim = GameObjects.createPlayer \\( position [0] [1] [0] first person v
 
 ## Player Controllers in ChromeEngine
 
-In traditional game engines, you usually have to create your own player controller, which can be a daunting task. However, ChromeEngine takes care of this with a convenient block, `controllers.player_controller`, within the `Play Logic` script. This block is responsible for adding full physics-based player movement, camera tracking and controls to your game.
+In traditional game engines, you usually have to create your own player controller, which can be a daunting task. However, ChromeEngine takes care of this with a convenient block, `controllers.player_controller`, within the `Play Logic` script (in the `Logic` sprite). This block is responsible for adding full physics-based player movement, camera tracking and controls to your game.
 
 If you're remixing the default blank project then you should already have this block in `Play Logic` but if you don't make sure to add:
 
 <ScratchBlocks>
 {`
-Controllers.playerController \\( walk speed  [1] run speed  [2] jump height [1.6] glide/walk mode = <not <>>\\) :: custom
+Controllers.playerController \\( walk speed  [1] jump height [1.6] glide/walk mode = <not <>>\\) :: custom
 `}
 </ScratchBlocks>
 
@@ -36,7 +36,7 @@ You can now take control of the character! You'll need to start the game to play
 
 ## Adding sound effects when walking
 
-In ChromeEngine we can add sound effects which play when walking by adding 4 sounds to the `logic` sprite which are all name in the format `<sound effect label> <num>`. ChromeEngine comes with a sound effect called 'Concrete Step' which we can add to our game easily withe the `materials.set_sfx` block. For example we can add it to the `Yellow` material by doing:
+In ChromeEngine we can add sound effects which play when walking by adding 4 sounds to the `logic` sprite which are all named in the format `<sound effect label> <num>`. ChromeEngine comes with a sound effect called 'Concrete Step' which we can add to our game easily with the `materials.set_sfx` block, placed after the material creation somewhere in `Setup scene objects` block in the `Setup` sprite. For example we can add it to the `Yellow` material by doing:
 
 <ScratchBlocks>
 {`

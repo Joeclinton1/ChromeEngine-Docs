@@ -51,7 +51,9 @@ The coordinate system used by ChromeEngine is based on the system used by OpenGL
 - The y-axis goes from bottom (negative values) to top (positive values).
 - The z-axis goes from far (negative values) to near (positive values).
 
-This is important to understand when setting positions or rotations of your game objects.
+![Coordinate system](media/coordinate-system.png)
+
+This is important to understand when setting positions of your game objects.
 
 ## Making the platforms with `createCuboid`
 

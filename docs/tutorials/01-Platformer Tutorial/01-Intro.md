@@ -10,7 +10,7 @@ We'll be using ChromeEngine for this tutorial. To get an empty version of Chrome
 
 ## ChromeEngine's Layout
 
-Before you begin using ChromeEngine it's helpful to know a little bit about it's layout. It's not complicated but it's important you're familiar with it or you might get stuck right out of the gate. ChromeEngine contains many sprites but most of them are used to make the engine work, you only need to care about 4 of them: `Setup`, `Logic`, `GUI`, `Settings`.
+Before you begin using ChromeEngine it's helpful to know a little bit about it's layout. It's not complicated but it's important you're familiar with it or you might get stuck right out of the gate. ChromeEngine contains many sprites but you only need to care about 4 of them: `Setup`, `Logic`, `GUI`, `Settings`.
 
 ### Code Locations
 Additionally within those 4 sprites you MUST place your code within the designated blocks for user code. If in doubt please refer to the following table for all user code locations:
