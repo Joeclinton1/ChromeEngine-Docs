@@ -36,5 +36,15 @@ All images in the tutorial are taken by first swapping to edit mode, then flying
 
 ![Edit mode button](media/view-edit-mode-button.png)
 
+## Disabling shadows for more speed
+
+If your computer is on the slow side, then this tutorial is probably going to be laggy. To make your game run faster you might want to consider disabling shadows as this makes it about 30-40% faster. You can do this by going to the `Settings` sprite and changing the first setting called `@shadows?`:
+
+<ScratchBlocks>
+{`
+set [@shadows? v] to [0]
+`}
+</ScratchBlocks>
+
 ## Ready, set, go!
 So, are you ready to embark on this exciting adventure of creating your very own platformer game? Let's jump right into it and start crafting an immersive world of platforms and challenges! 🎮🌟
