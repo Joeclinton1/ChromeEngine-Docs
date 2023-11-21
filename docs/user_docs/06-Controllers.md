@@ -11,13 +11,12 @@ These are blocks which control player and/or camera movement. They should be pla
 
 <ScratchBlocks>
 {`
-controllers.playerController \\( walk speed  [], run speed  [], jump height [], glide/walk mode = <>\\) :: custom
+controllers.playerController \\( walk speed  [] jump height [] glide/walk mode = <>\\) :: custom
 `}
 </ScratchBlocks>
 
 Makes it so the arrow keys and WASD can be used to move the player in 3D space. Additionally targets the player with the camera.
 - **Walk speed**: the speed the player moves normally
-- **Run speed**: the speed the player moves when shift key is pressed.
 - **Jump height**: height of game units the player will move up on the y axis when the spacebar is pressed
 - **glide/walk mode**: If set to true the player will move around as if they have legs otherwise the player will move like a rolling ball.
 
