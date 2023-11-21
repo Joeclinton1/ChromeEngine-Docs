@@ -40,7 +40,7 @@ Materials.newMaterial \\(label [Red] pointer to secondary colour material [ ] sf
 `}
 </ScratchBlocks>
 
-To assign a specific material to a GameObject, just insert that materials name in the `name` input slot when creating the GameObject. E.g to make the `Start` Platform use the material `Yellow` we do:
+To assign a specific material to a GameObject, just insert that materials label in the `Material` input of slot when creating the GameObject. E.g to make the `Start` Platform use the material `Yellow` we do:
 <ScratchBlocks>
 {`
 GameObjects.createCuboid \\(Scale [2] [0.2] [2] Position [0] [0] [0] Rotation [ ] [ ] [ ] Material [Yellow] name [Start]\\) :: custom
