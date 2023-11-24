@@ -52,7 +52,7 @@ For `Platform 5`, we want it to rotate in place around the y-axis (yaw), like a 
 
 <ScratchBlocks>
 {`
-  GameObjects.setRotation \\( object name [Platform 5] rotation \\(yaw, pitch, roll\\) (([sin v] of (timer)) * [180])  [] []   \\) :: custom
+  GameObjects.setRotation \\( object name [Platform 5] rotation \\(yaw, pitch, roll\\) (([sin v] of ((timer)*[30])) * [90])  [] []   \\) :: custom
 `}
 </ScratchBlocks>
 
@@ -61,6 +61,8 @@ For `Platform 5`, we want it to rotate in place around the y-axis (yaw), like a 
 If you aren't familiar with yaw, pitch and roll, then just just know that yaw rotates around the y-axis, pitch around the x-axis and roll around the z-axis.
 
 ![principal axes](media/yaw-pitch-roll.png)
+
+We wanted to rotate our platform around the y-axis, so that means we applied a rotation on the yaw axis. To make it oscillate we used sin motion again, with timer as the input parameter. Multiplying timer by 30 makes it repeat roughly every 6 seconds and multiplying it by 90 outside the sin block, makes it spin quater way around and then back again.
 
 ## Moving our enemy towards the player
 
@@ -72,7 +74,7 @@ To point an object towards a position in ChromeEngine we use the `GameObjects.po
 
 <ScratchBlocks>
 {`
-  GameObjects.pointTowardsPosition \\( object 1 name [Enemy] Position [@player_x] [] [@player_z]\\) :: custom
+  GameObjects.pointTowardsPosition \\( object 1 name [Enemy] Position (@player_x) [] (@player_z)\\) :: custom
 `}
 </ScratchBlocks>
 
@@ -83,7 +85,7 @@ To move an object forward by a step we use the `GameObjects.move` block. Here's 
 
 <ScratchBlocks>
 {`
-  GameObjects.move \\( object name [Enemy] steps [0.1]\\) :: custom
+  GameObjects.move \\( object name [Enemy] steps [0.04]\\) :: custom
 `}
 </ScratchBlocks>
 
@@ -96,15 +98,17 @@ We can constrain the rotation by setting the pitch rotation to 0 AFTER calling `
 
 <ScratchBlocks>
 {`
-    GameObjects.pointTowardsPosition \\( object 1 name [Enemy] Position [@player_x] [] [@player_z]\\) :: custom
+    GameObjects.pointTowardsPosition \\( object 1 name [Enemy] Position (@player_x) [] (@player_z)\\) :: custom
     GameObjects.setRotation \\( object name [Enemy] rotation \\(yaw, pitch, roll\\) [] [0] []\\) :: custom
-    if <<([abs v] of ((@player_x)-[0]))< [1.4]> and <([abs v] of ((@player_z)-[-20]))< [1.9]>>then
-    GameObjects.move \\( object name [Enemy] steps [0.1]\\) :: custom
+    if <<([abs v] of ((@player_x)-[0]))< [1.25]> and <([abs v] of ((@player_z)-[-20]))< [1.85]>>then
+    GameObjects.move \\( object name [Enemy] steps [0.04]\\) :: custom
 `}
 </ScratchBlocks>
 
 - `0` and `-20` are the x,z coordinate of the platform
-- `1.4` and `1.9` are the width, height of the platform
+- `1.25` and `1.85` are a little more than half the width and depth of platform 6.
+
+The code may look a bit complex, but all it means is "if the player's x is within half the width of the platform from the platform's centre's x and the player's z is within half the depth of the platform from the platform's centre's z then the player is within the bounds of the platform and the enemy should attack"
 
 ## Wrapping up and Additional Resources
 

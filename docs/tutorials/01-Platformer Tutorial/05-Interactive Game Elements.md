@@ -19,7 +19,7 @@ If the player touches the specified block it sets `_touching?` to true, and adds
 
 ## Killing the player if they touch a hazard
 
-We'll use the `Interactions.playerIsTouching?` block to check if the player is touching any of the hazards and if so add `hazard` to the `ìnteractions` list. Then we'll make it so that if `interactions` contains hazard or the player y is below the level of the ground we reset the player back to the start and play a death sound effect.
+We'll use the `Interactions.playerIsTouching?` block to check if the player is touching any of the hazards and if so add `hazard` to the `ìnteractions` list. Then we'll make it so that if `interactions` contains hazard or the player y is below the level of the ground plus a little bit, we reset the player back to the start and play a death sound effect.
 
 Here's the code to do this:
 
@@ -28,7 +28,7 @@ Here's the code to do this:
 _touching? = Interactions.playerIsTouching? \\( object name  [Spike 1] label  [hazard] \\) :: custom
 _touching? = Interactions.playerIsTouching? \\( object name  [Spike 2] label  [hazard] \\) :: custom
 _touching? = Interactions.playerIsTouching? \\( object name  [Enemy] label  [hazard] \\) :: custom
-if <<[interactions v] contains [hazard] ?> or <(@player_y) < (@ground_y)>> then
+if <<[interactions v] contains [hazard] ?> or <(@player_y) < ((@ground_y) + [1])>> then
     set [@player_x v] to [0]
     set [@player_y v] to [1]
     set [@player_z v] to [0] 
