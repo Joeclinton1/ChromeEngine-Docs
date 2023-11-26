@@ -103,7 +103,7 @@ module.exports = {
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/your-github-username/your-repo-name',
+                            href: 'https://github.com/Joeclinton1/ChromeEngine-Docs',
                         },
                     ],
                 },
