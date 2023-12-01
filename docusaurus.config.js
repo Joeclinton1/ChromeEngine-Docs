@@ -59,7 +59,7 @@ module.exports = {
                 },
                 { to: '/blog', label: 'Blog', position: 'left' },
                 {
-                    href: 'https://github.com/your-github-username/your-repo-name',
+                    href: 'https://joeclinton1.github.io/ChromeEngine-Docs/',
                     label: 'GitHub',
                     position: 'right',
                 },
