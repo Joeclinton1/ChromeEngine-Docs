@@ -40,11 +40,11 @@ Once you've finished designing your game scene in Blender, export it as an .obj 
 
 ### Importing your mesh
 
-Now that you have your beautiful .obj file, let's bring it into your ChromeEngine game. To do this we can use the `import_from_OBJ_file` block:
+Now that you have your beautiful .obj file, let's bring it into your ChromeEngine game. To do this we can use the `importFromOBJFile` block:
 
 <ScratchBlocks>
 {`
-GameObjects.import_from_OBJ_file \\( CW orientated? <> scale [1] align_center <> .obj file data \\(leave blank if using _OBJ list\\) []\\) :: custom
+GameObjects.importFromOBJFile \\( CW orientated? <> scale [1] align_center <> .obj file data \\(leave blank if using _OBJ list\\) []\\) :: custom
 `}
 </ScratchBlocks>
 
@@ -115,5 +115,18 @@ Here's an example of how it should look:
 <ScratchBlocks>
 {`
 Materials.importFromMTL\\(.MTL file data [your file data goes here]\\) :: custom
+`}
+</ScratchBlocks>
+
+put this block BEFORE the importFromOBJFILE block!
+
+## importFromMTL must come before importFromOBJFile
+
+Inorder for ChromeEngine to know that your obj file has valid textures you need to run the importFromMTL block BEFORE you run the importFromOBJFile block
+
+<ScratchBlocks>
+{`
+Materials.importFromMTL\\(.MTL file data [your file data goes here]\\) :: custom
+GameObjects.importFromOBJFile \\( CW orientated? <> scale [1] align_center <> .obj file data \\(leave blank if using _OBJ list\\) []\\) :: custom
 `}
 </ScratchBlocks>
